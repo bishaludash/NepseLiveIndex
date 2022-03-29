@@ -5,3 +5,5 @@
 !main.py
 !requirements.txt
 !responseSample.json
+!dumps/
+!dumps/*

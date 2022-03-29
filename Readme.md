@@ -1,3 +1,5 @@
+## Result
+![CLI LiveNepseIndex response.](/dumps/cliRequest.png)
 ## Installation
 - Install packages from requirements.txt (*Hint: below install command*)
 - Run command `python3 main.py`
