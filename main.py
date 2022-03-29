@@ -1,3 +1,4 @@
+from time import clock_getres
 import requests
 from datetime import datetime
 
@@ -26,7 +27,7 @@ def writeLastIndex(ltp, startIndex, date_time_str):
     """
     # check if time is 3PM or greater
     dateTimeObj = datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
-    if(dateTimeObj.hour >= 15):
+    if(dateTimeObj.hour >= 14):
         f = open("lastIndex.csv", "a")
         f.write("{},{},{}\n".format(dateTimeObj.date(),startIndex,ltp))
         f.close()
