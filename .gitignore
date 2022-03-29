@@ -1,0 +1,7 @@
+*
+!.gitignore
+!Readme.md
+!lastIndex.csv
+!main.py
+!requirements.txt
+!responseSample.json
