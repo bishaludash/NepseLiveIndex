@@ -14,7 +14,7 @@ Update it to (`YesterdaysLastIndex - TodaysLastIndex`)
 - Run the script in cronjon.(*Note: after notifying is enabled*)
     ### “At every 5th minute from 1 through 59 past every hour from 11 through 15.”
     ```
-    1/5 11-15 * * * /usr/bin/python3 ~/dev/liveIndex/main.py
+    1/5 11-15 * * * /usr/bin/python3 ~/dev/liveIndex/main.py 1
     ```
 ### Requirements.txt
 - `Export:`  pip3 freeze > requirements.txt
