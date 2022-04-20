@@ -2,7 +2,9 @@ from time import clock_getres
 import requests
 from datetime import datetime
 import sys
+import pathlib
 
+projectpath = pathlib.Path(__file__).parent.resolve()
 url="https://www.nepsealpha.com/ajax/live-scan-nepse?fs=10-11-31"
 res = requests.get(url)
 liveIndex = res.json()
@@ -29,7 +31,7 @@ def writeLastIndex(ltp, startIndex, date_time_str):
     # check if time is 3PM or greater
     dateTimeObj = datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
     if(dateTimeObj.hour >= 14 and len(sys.argv)>1 ):
-        f = open("lastIndex.csv", "a")
+        f = open("{}/lastIndex.csv".format(projectpath), "a")
         f.write("{},{},{}\n".format(dateTimeObj.date(),startIndex,ltp))
         f.close()
 
